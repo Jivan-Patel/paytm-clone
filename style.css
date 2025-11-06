@@ -1,0 +1,28 @@
+:root{
+    --bg-color: rgb(247, 249, 252);
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+body{
+    background-color: var(--bg-color);
+    border: 1px solid;
+    padding: 2em;
+}
+li{
+    list-style-type: none;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
