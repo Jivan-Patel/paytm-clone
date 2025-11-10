@@ -1,0 +1,234 @@
+:root {
+    --bg-color: rgb(247, 249, 252);
+    --max-width: 1170px;
+    --border-radius: 1.25em;
+    --paddding: 3rem;
+    --transition: 0.2s ease all;
+    --brand-color: #00baf2;
+    --text-dark: #333;
+    --bg-light: #e9f6fc;
+    --white: #fff;
+}
+
+
+.pageNavigation {
+    background-color: rgb(0, 41, 112);
+    padding: 1rem 0;
+    width: 100%;
+    padding: 2em 4em 7em;
+}
+
+
+.pageNavigation ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.pageNavigation li {
+    text-align: center;
+}
+
+.pageNavigation li:hover img {
+    transform: scale(1.1);
+}
+
+
+.pageNavigation a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+.pageNavigation img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    transition: all 0.2s ease;
+}
+
+.pageNavigation span {
+    font-size: 0.75rem;
+    letter-spacing: 0.3px;
+}
+
+
+
+
+
+.paymentCard {
+    background-color: var(--white);
+    max-width: 400px;
+    margin: -5rem 4rem 5rem;
+    padding: 2rem 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+.paymentCard h2 {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+
+.paymentCard .options {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.paymentCard label {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+
+.paymentCard form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+
+.paymentCard input {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    outline: none;
+    padding: 0.6rem 0;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    background-color: transparent;
+    transition: all var(--transition);
+    margin: 0.5rem 0;
+}
+
+.paymentCard input:focus {
+    border-color: var(--brand-color);
+}
+
+.relative {
+    position: relative;
+}
+
+
+.browsePlan {
+    position: absolute;
+    font-size: 0.8rem;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.paymentCard .browsePlan .bcol {
+    color: var(--brand-color);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+
+.paymentCard button {
+    background-color: var(--brand-color);
+    color: var(--white);
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.9rem;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: all var(--transition);
+    margin:  1rem 0;
+}
+
+.paymentCard button:hover {
+    background-color: #0096c7;
+}
+
+.browsePlan span{
+    display: block;
+}
+
+
+
+.paymentCardOperator{
+    background-color: var(--white);
+    margin: -3rem 4rem 3rem;
+    padding: 2rem 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+.pcoImgContainer{
+    margin: 2rem 0;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(7,1fr);
+    font-size: 0.8125rem;
+    font-weight: 400;
+    color: rgb(130, 130, 130);
+}
+.pcoImg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+.pcoImg img, .pcoImg span{
+    display: block;
+}
+.pcoImg img{
+    width: 5rem;
+}
+.paymentCardOperator h2{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(51, 51, 51);
+}
+
+@media (max-width: 600px) {
+    .paymentCard {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+    
+    .paymentCard h2 {
+        font-size: 1rem;
+    }
+    
+    .paymentCard button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .pageNavigation ul {
+        gap: 1.5rem;
+    }
+
+    .pageNavigation img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .pageNavigation span {
+        font-size: 0.75rem;
+    }
+}

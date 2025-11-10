@@ -11,142 +11,10 @@
 }
 
 
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
-    color: currentColor;
-}
-
-body {
-    background-color: var(--bg-color);
-    font-family: Inter, sans-serif;
-    overflow-x: hidden;
-}
-
-li {
-    list-style-type: none;
-}
-
 section {
     max-width: var(--max-width);
     margin: 2em auto;
 }
-
-
-header {
-    color: #000;
-    font-weight: 400;
-    font-size: 14px;
-    display: block;
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 5px 20px rgba(0, 41, 112, .1);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-
-.topNav {
-    max-width: var(--max-width);
-    padding: 13px 18px;
-    margin: 0 auto;
-    background: #fff;
-    font-size: 14px;
-    color: #000;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-}
-
-
-.logo {
-    margin-right: 1rem;
-}
-
-.navigation {
-    font-size: 0.875em;
-    color: #000;
-    font-weight: 600;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navigation li {
-    font-size: 0.87r5em;
-    color: #000;
-    font-weight: 600;
-    list-style: none;
-    cursor: default;
-    padding: 10px 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.appLinkSignIn {
-    font-size: 0.875rem;
-    color: #000;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-}
-
-.signinContainer {
-    color: #000;
-    font-weight: 600;
-    position: relative;
-    cursor: pointer;
-}
-
-.sic {
-    cursor: pointer;
-    padding: 2px 15px 2px 2px;
-    background: #002970;
-    border-radius: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: 14px;
-    color: #fff;
-    font-weight: 500;
-}
-
-.sic img {
-    cursor: pointer;
-    font-size: 14px;
-    color: #fff;
-    font-weight: 500;
-    border-radius: 50%;
-    margin-right: 10px;
-    width: 32px;
-    height: 32px;
-    outline: 2px solid #002970;
-}
-
-.downloadApp {
-    padding: 8px 16px;
-    border-radius: 18px;
-    margin-right: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    color: #002970;
-    font-weight: 600;
-}
-
-
 
 
 .rebpMainSection {
@@ -645,46 +513,7 @@ header {
 
 
 
-
-details ul {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1em;
-    margin: 1em;
-}
-
-details ul li {
-    font-weight: 500;
-    font-size: 0.75rem;
-    color: rgb(112, 112, 112);
-}
-
-summary {
-    color: rgb(112, 112, 112);
-    font-size: 0.875rem;
-    font-weight: 700;
-    margin: 1em 0;
-}
-
-footer p {
-    color: rgb(112, 112, 112);
-}
-.footerSection{
-    background: white;
-}
-footer{
-    padding: 3em;
-
-}
 @media(max-width: 900px) {
-    .navigation {
-        display: none;
-    }
-
-    .downloadApp {
-        display: none;
-    }
-
     .offerBannerSection {
         flex-wrap: wrap;
     }
@@ -726,21 +555,6 @@ footer{
     .cb2 img {
         width: 75vw;
         height: auto;
-    }
-
-    .sic span {
-        display: none;
-    }
-    .sic{
-        background-color: transparent;
-    }
-
-    details ul{
-        grid-template-columns: 1fr;
-    }
-    .cb2 span{
-        display: block;
-        min-width: 135px;
     }
 }
 
