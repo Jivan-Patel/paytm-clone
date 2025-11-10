@@ -1,28 +1,755 @@
-:root{
+:root {
     --bg-color: rgb(247, 249, 252);
+    --max-width: 1170px;
+    --border-radius: 1.25em;
+    --paddding: 1.5em;
+    --transition: 0.2s ease all;
+    --brand-color: #00baf2;
+    --text-dark: #333;
+    --bg-light: #e9f6fc;
+    --white: #fff;
 }
 
 
 
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-a{
+
+a {
     text-decoration: none;
     color: currentColor;
 }
 
-body{
+body {
     background-color: var(--bg-color);
-    border: 1px solid;
-    padding: 2em;
+    font-family: Inter, sans-serif;
+    overflow-x: hidden;
 }
-li{
+
+li {
     list-style-type: none;
 }
-.flex{
+
+section {
+    max-width: var(--max-width);
+    margin: 2em auto;
+}
+
+
+header {
+    color: #000;
+    font-weight: 400;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0, 41, 112, .1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+.topNav {
+    max-width: var(--max-width);
+    padding: 13px 18px;
+    margin: 0 auto;
+    background: #fff;
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+
+
+.logo {
+    margin-right: 1rem;
+}
+
+.navigation {
+    font-size: 0.875em;
+    color: #000;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.navigation li {
+    font-size: 0.87r5em;
+    color: #000;
+    font-weight: 600;
+    list-style: none;
+    cursor: default;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.appLinkSignIn {
+    font-size: 0.875rem;
+    color: #000;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.signinContainer {
+    color: #000;
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+}
+
+.sic {
+    cursor: pointer;
+    padding: 2px 15px 2px 2px;
+    background: #002970;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.sic img {
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+    outline: 2px solid #002970;
+}
+
+.downloadApp {
+    padding: 8px 16px;
+    border-radius: 18px;
+    margin-right: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #002970;
+    font-weight: 600;
+}
+
+
+
+
+.rebpMainSection {
+    background-color: #fff;
+    padding: var(--paddding);
+    border-radius: var(--border-radius);
+}
+
+.getUpiStatmentSection {
+    color: #000;
+    font-weight: 400;
+    font-size: 14px;
+    display: block;
+    padding: 16px 0;
+    background-color: #f7f9fc;
+}
+
+.gusContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+.gusContainer img {
+    max-width: 728px;
+    width: 98vw;
+    height: auto;
+}
+
+.rebpContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1170px;
+}
+
+.rebpContainer>div {
+    margin: auto;
+    text-align: center;
+}
+
+.rebpMainSection {
+    background-color: #fff;
+    flex: 2;
+    padding: 30px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rebpHead {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+
+.rebpMain {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rebpMain a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    transition: var(--transition);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+}
+
+.rebpMain a:hover {
+    box-shadow: 0 15.96px 53.83px 0 rgba(184, 185, 228, .4), 1px 1px 0 0 #fff;
+}
+
+.rebpBanner img:hover {
+    scale: 1.02;
+    transition: var(--transition);
+}
+
+.rebpMain a img {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 10px;
+}
+
+.rebpMain a span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+}
+
+
+
+.rechargePromoSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+}
+
+.rechargePromoSection div img {
+    width: 95%;
+    transition: var(--transition);
+}
+
+.rechargePromoSection div img:hover {
+    scale: 1.02;
+}
+
+
+.ptmBannerSection img {
+    width: 32%;
+    border-radius: var(--border-radius);
+}
+
+.ptmBannerSection {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.travelSectionMainContainer {
+    background-color: rgb(232, 248, 253);
+    padding: 1em;
+}
+
+
+
+
+.tabs {
+    display: flex;
+    gap: 3rem;
+    justify-content: start;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.tabs a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.875em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 0.4rem;
+}
+
+.tabs .active {
+    border-bottom: 0.15rem solid var(--brand-color);
+}
+
+.tabs img {
+    width: 2.325rem;
+    height: 2.325rem;
+}
+
+
+.ptmTravelLogo img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 8.75rem;
+}
+
+
+/* Box */
+.travel-box {
+    background: var(--white);
+    border-radius: 0.7rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* Trip type */
+.trip-type {
+    display: flex;
+    gap: 2rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.trip-type input {
+    margin-right: 0.4em;
+    color: var(--brand-color);
+}
+
+/* Travel form */
+.travel-form {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    flex: 1;
+    min-width: 10rem;
+}
+
+.borderR {
+    border-right: 1px solid #cacaca;
+}
+
+.travelIcon {
+    position: relative;
+    top: 5px;
+}
+
+.label {
+    font-size: 0.75rem;
+    color: rgba(15, 15, 15, 0.54);
+    margin-bottom: 0.3rem;
+    line-height: 1rem;
+    font-weight: 400;
+}
+
+.input-group h3 {
+    font-size: 1rem;
+    line-height: 1.5em;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.add-return {
+    color: rgb(0, 186, 242) !important;
+    font-weight: 500;
+}
+
+/* Search button */
+.search-btn {
+    background: var(--brand-color);
+    color: var(--white);
+    border: none;
+    padding: 0.9em 1.6em;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.search-btn:hover {
+    background: #0098c8;
+}
+
+/* Special fares */
+.special-fares {
+    border-top: 1px solid #ddd;
+    padding-top: 1.2rem;
+}
+
+.fare-options {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.6rem;
+}
+
+.fare {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.fare img {
+    position: relative;
+    top: 3px;
+}
+
+
+.fare-box {
+    border-radius: var(--border-radius);
+    border: 0.5px solid rgb(208, 206, 206);
+    background: #f7f9fa;
+    border-radius: 0.4rem;
+    padding: 0.6em 1em;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.fare-box span {
+    font-size: 0.8rem;
+    color: #777;
+    display: block;
+    margin-top: 0.2em;
+}
+
+.extraSav {
+    color: rgb(39, 174, 96);
+    font-size: 0.75em;
+}
+
+
+.offerBannerSection {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+}
+
+.offerDetails {
+    font-weight: 400;
+    font-size: 14px;
+    margin-right: 3%;
+    align-self: center;
+    box-sizing: border-box;
+    padding: 20px 0 20px 100px;
+}
+
+.odHead {
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 1.5rem 0;
+}
+
+.odPara {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.4em;
+    margin: 1.5rem 0;
+}
+
+.bcolor {
+    color: var(--brand-color);
+}
+
+.odDownloadbtn img {
+    width: 35%;
+}
+
+.odIcon img {
+    height: 1.5rem;
+}
+
+.odIcon2 img {
+    height: 3rem;
+}
+
+.lmBtn {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 35px;
+    color: #fff;
+}
+
+.lmBtn span {
+    border: 1px solid #002970;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #002970;
+    padding: 8px 20px;
+    border-radius: 35px;
+    color: #fff;
+    transition: var(--transition);
+}
+
+.lmBtn span:hover {
+    background-color: transparent;
+    color: #002970;
+}
+
+
+.offerBannerImg {
+    width: 100vw;
+}
+
+.offerBannerImg img {
+    width: 100%;
+    object-fit: fill;
+}
+
+.conditions {
+    margin-top: 2rem;
+    font-size: 0.75rem;
+    line-height: 1.5em;
+    color: rgb(112, 112, 112);
+    font-weight: 500;
+}
+
+.conditions a {
+    color: var(--brand-color);
+    font-weight: 500;
+}
+
+
+
+
+.custmorSupportBanner img {
+    width: 100%;
+}
+
+.custmorSupportBanner a {
+    border-radius: 3rem;
+    color: #ffffff;
+    background: linear-gradient(#0085FE, #00C6F0);
+    padding: 1rem;
+    gap: 1em;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.custmorSupportBanner a span {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1em;
+}
+
+.custmorSupportBanner img {
+    height: 2rem;
+    width: auto;
+}
+
+.learnMoreBtn {
+    border-radius: 100px;
+    padding: 0.5em 2em;
+    border: 1px solid white;
+}
+
+
+
+.offerCardSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.offerCard {
+    width: 49%;
+    padding: 60px 20px 0 40px;
+    border-radius: 3rem;
+    margin: 2rem 0;
+}
+
+.cardIcon img {
+    height: 2.5rem;
+    margin-bottom: 1em;
+}
+
+.cardBannerImg img {
+    width: 100%;
+}
+
+.cardBtn span {
+    border-radius: 5rem;
+    border: 1px solid #002970;
+    color: #002970;
+    padding: 0.5em 1em;
+    transition: var(--transition);
+}
+
+.cardBtn span:hover {
+    background-color: #002970;
+    color: white;
+}
+
+.cb2 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cb2 div {
+    width: 30%;
+}
+
+.cb2 img {
+    height: 3rem;
+}
+
+.cardHead {
+    padding: 0;
+}
+
+.c1 {
+    background-image: url('https://assetscdn1.paytm.com/images/catalog/view_item/1725638720587.png');
+    background-repeat: no-repeat;
+}
+
+.c2 {
+    background: linear-gradient(#D3F5FF, #FFFFFF);
+}
+
+
+
+
+details ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+    margin: 1em;
+}
+
+details ul li {
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: rgb(112, 112, 112);
+}
+
+summary {
+    color: rgb(112, 112, 112);
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin: 1em 0;
+}
+
+footer p {
+    color: rgb(112, 112, 112);
+}
+.footerSection{
+    background: white;
+}
+footer{
+    padding: 3em;
+
+}
+@media(max-width: 900px) {
+    .navigation {
+        display: none;
+    }
+
+    .downloadApp {
+        display: none;
+    }
+
+    .offerBannerSection {
+        flex-wrap: wrap;
+    }
+    .rebpMain{
+        flex-wrap: wrap;
+    }
+    .rebpContainer{
+        display: block;
+    }
+    .rebpContainer> div{
+        margin: 1.5em 0;
+    }
+    .rechargePromoSection{
+        grid-template-columns: 1fr;
+    }
+    .custmorSupportBanner span{
+        font-size: 0.875em;
+    }
+   
+}
+
+@media(max-width: 600px) {
+    .ptmTravelLogo {
+        display: none;
+    }
+
+    .offerDetails {
+        padding: 2rem;
+    }
+
+    .cb2 {
+        display: block;
+    }
+
+    .cb2 div {
+        margin: 1.5em 0;
+    }
+
+    .cb2 img {
+        width: 75vw;
+        height: auto;
+    }
+
+    .sic span {
+        display: none;
+    }
+    .sic{
+        background-color: transparent;
+    }
+
+    details ul{
+        grid-template-columns: 1fr;
+    }
+    .cb2 span{
+        display: block;
+        min-width: 135px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .offerCardSection {
+        display: block;
+    }
+
+    .offerCard {
+        width: 100%;
+    }
 }
