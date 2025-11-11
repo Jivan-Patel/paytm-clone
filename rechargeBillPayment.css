@@ -23,7 +23,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2.5rem;
+    gap: 1rem;
     flex-wrap: wrap;
     list-style: none;
     margin: 0;
@@ -43,7 +43,7 @@
 .pageNavigation a {
     text-decoration: none;
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 0.9em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,7 +59,7 @@
 }
 
 .pageNavigation span {
-    font-size: 0.75rem;
+    font-size: 0.75em;
     letter-spacing: 0.3px;
 }
 
@@ -78,7 +78,7 @@
 
 
 .paymentCard h2 {
-    font-size: 1.1rem;
+    font-size: 1.1em;
     color: var(--text-dark);
     font-weight: 600;
     margin-bottom: 1rem;
@@ -94,7 +94,7 @@
 
 
 .paymentCard label {
-    font-size: 0.95rem;
+    font-size: 0.95em;
     color: var(--text-dark);
     cursor: pointer;
 }
@@ -111,12 +111,12 @@
     border: none;
     border-bottom: 1px solid #ddd;
     outline: none;
-    padding: 0.6rem 0;
-    font-size: 0.95rem;
+    padding: 0.6em 0;
+    font-size: 0.95em;
     color: var(--text-dark);
     background-color: transparent;
     transition: all var(--transition);
-    margin: 0.5rem 0;
+    margin: 0.5em 0;
 }
 
 .paymentCard input:focus {
@@ -130,7 +130,7 @@
 
 .browsePlan {
     position: absolute;
-    font-size: 0.8rem;
+    font-size: 0.8em;
     right: 0;
     bottom: 0;
     cursor: pointer;
@@ -149,7 +149,7 @@
     color: var(--white);
     border: none;
     outline: none;
-    font-size: 0.95rem;
+    font-size: 0.95em;
     font-weight: 600;
     padding: 0.9rem;
     border-radius: 0.5em;
@@ -178,9 +178,9 @@
 .pcoImgContainer{
     margin: 2rem 0;
     display: grid;
-    gap: 1em;
+    gap: 2em;
     grid-template-columns: repeat(7,1fr);
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     font-weight: 400;
     color: rgb(130, 130, 130);
 }
@@ -198,26 +198,24 @@
     width: 5rem;
 }
 .paymentCardOperator h2{
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 600;
     color: rgb(51, 51, 51);
 }
 
-@media (max-width: 600px) {
-    .paymentCard {
-        max-width: 90%;
-        padding: 1.5rem;
-    }
-    
-    .paymentCard h2 {
-        font-size: 1rem;
-    }
-    
-    .paymentCard button {
-        font-size: 0.9rem;
+
+
+@media(max-width: 1024px){
+    .pcoImgContainer{
+        grid-template-columns: repeat(5,1fr);
     }
 }
 
+@media(max-width: 900px){
+    .pcoImgContainer{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
 @media (max-width: 768px) {
     .pageNavigation ul {
         gap: 1.5rem;
@@ -231,4 +229,36 @@
     .pageNavigation span {
         font-size: 0.75rem;
     }
+    .pcoImgContainer{
+        grid-template-columns: repeat(3,1fr);
+    }
 }
+@media (max-width: 600px) {
+    .paymentCard {
+        max-width: 95%;
+        padding: 1.5rem;
+        font-size: 0.875em;
+        margin: unset 0;
+    }
+    
+    .paymentCard h2 {
+        font-size: 1rem;
+    }
+    
+    .paymentCard button {
+        font-size: 0.9rem;
+    }
+    .pcoImgContainer{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (orientation: portrait){
+    .paymentCard, .paymentCardOperator{
+        width: 95vw;
+        margin: 2rem auto;
+    }
+    .pageNavigation{
+        display: none;
+    }
+}
+
